@@ -15,7 +15,6 @@ html{
 
 /* header */
 header{
-    /* border: 1px solid blue; */
     width: 100%;
     height: 95px;
     position: fixed;
@@ -27,7 +26,6 @@ header{
     font-weight: 500;
 }
 header:hover{
-    /* color: white; */
     height: 445px;
     background: rgba(0, 0, 0,0.75);
 }
@@ -48,27 +46,32 @@ header::after{
     align-items: center;
 }
 .logoArea{
-    /* border: 1px solid red; */
     width: 200px;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     padding-left: 26px;
+    }
+
+.logoArea a{
+    position: relative;
+    width: 200px;
+    height: 95px;
+    display: flex;
+    align-items: center;
 }
-.logoArea img{
-    /* border: 1px solid greenyellow; */
-    width: 100%;
+.logoArea>h3>a>img{
+    height: 30px;
+    width: auto;
+    position: absolute;
+    right:0;top: 50%;
+    transform: translateY(-50%);
 }
 
 .gnb{width: 740px;}
 .gnb>ul{
-    /* border: 1px solid greenyellow; */
     display: flex;
     height: 95px;
 }
 .gnb>ul>li{
-    /* border: 1px solid red; */
     position: relative;
     display: flex;
     justify-content: center;
@@ -77,7 +80,6 @@ header::after{
     flex: 1;
 }
 .gnb>ul>li>ul{
-    /* border: 1px solid green; */
     position: absolute;
     left: 0; top: 95px;
     width: 100%;
@@ -89,18 +91,15 @@ header::after{
 }
 
 .language{
-    /* border: 1px solid red; */
     width: 200px;
 }
 .language>ul{
-    /* border: 1px solid greenyellow; */
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 26px;
 }
 .language>ul>li{
-    /* border: 1px solid aqua; */
     width: 50px;
     height: 30px;
     display: flex;
@@ -121,22 +120,22 @@ header::after{
     padding: 4px 0;
 }
 .language>ul>li>a>img{
-    /* border: 1px solid red; */
-    width: 100%;
+    height: 20px;
+    width: auto;
     position: absolute;
-    left: 0; top: 0;
+    right: 0; top: 50%;
+    transform: translateY(-50%);
 }
+
 
 /* main */
 main{
     width: 100%;
    margin: 0 auto;
-   /* position: relative; */
 }
 .bannerSlide{
     width: 100%;
     height: 969px;
-    /* border: 1px solid red; */
     margin: 0 auto;
     position: relative;
     overflow: hidden;
@@ -171,7 +170,6 @@ main{
     left: 0; top: 0;
 }
 .bannerSlide .flotingTxt{
-    /* border: 1px solid lime; */
     width: 100%;
     position: absolute;
     left: 50%;top: 50%;
@@ -196,15 +194,22 @@ main{
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    position: relative;
+}
+.introduce>p{
+    position: absolute;
+    left: 0;top: 50%;
+    transform: translateY(-50%)translateX(-120%)rotate(270deg);
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    z-index: 50;
 }
 .intro_left{
-    /* border: 1px solid green; */
     width: 50%;
     height: 100%;
     position: relative;
 }
 .intro_left>h2{
-    /* border: 1px solid red; */
     font-family: 'Poppins', sans-serif;
     font-size: 100px;
     font-weight: 500;
@@ -213,13 +218,11 @@ main{
     line-height: 90px;
 }
 .intro_left>p{
-    /* border: 1px solid red; */
     font-size: 24px;
     position: absolute;
     left: 0;top: 340px;
 }
 .intro_left>a{
-    /* border: 1px solid red; */
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
     position: absolute;
@@ -264,6 +267,16 @@ main{
     background: black;
     opacity: 0.35;
 }
+.ideology>p{
+    position: absolute;
+    left: 0;top: 50%;
+    transform: translateY(-50%)translateX(58%)rotate(270deg);
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    z-index: 50;
+}
+
 .slide_images{
     width: 100%;
     transform: translateY(0%);    
@@ -322,7 +335,7 @@ main{
     overflow: hidden;
 }
 .businessArea>h2{
-    /* border: 1px solid aqua; */
+
     font-family: 'Poppins', sans-serif;
     font-size: 100px;
     font-weight: 500;
@@ -330,6 +343,15 @@ main{
     position: absolute;
     left: 150px;top: 120px;
     z-index: 20;
+}
+.businessArea>p{
+    position: absolute;
+    left: 0;top: 50%;
+    transform: translateY(-50%)translateX(58%)rotate(270deg);
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    z-index: 50;
 }
 .businessArea .sector{
     width: 400%;
@@ -402,7 +424,6 @@ main{
     color: #fff;
 }
 .text>a{
-    /* border: 1px solid red; */
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
     position: absolute;
@@ -411,9 +432,35 @@ main{
     background: url(../../img/main/logo_etc/viewmore.png) no-repeat 100% 50%;
     color: #999;
 }
+.controler{
+
+    position: absolute;
+    left: 140px;top: 270px;
+    width: 160px;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.pagination{
+    position: absolute;
+    left: 28%;
+    bottom: 120px;
+    display: flex;
+}
+.pagination>li{
+    width: 290px;height: 4px;
+    font-size: 0;
+    margin-right: 6px;
+    background: #fff;
+    opacity: 0.4;
+}
+.pagination>li:last-of-type{
+    margin-right: 0;
+}
+.pagination>li.on{opacity: 1;}
 
 .news{
-    /* border: 1px solid red; */
     width: 1620px;
     height: 969px;
     margin: 0 auto;
@@ -424,21 +471,26 @@ main{
     position: relative; 
 }
 .news>h2{
-    /* border: 1px solid blue; */
     font-family: 'Poppins', sans-serif;
     font-size: 100px;
     font-weight: 500;
     text-align: center;
-    margin-top: -40px;
+    margin-top: -45px;
 
 }
-.news>p{
-    /* border: 1px solid aqua; */
+.news>p.side_info{
+    position: absolute;
+    left: 0;top: 50%;
+    transform: translateY(-50%)translateX(-103%)rotate(270deg);
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    z-index: 50;
+}
+.news>h2+p{
     font-size: 24px;
     text-align: center;
 }
 .news>a{
-    /* border: 1px solid yellowgreen; */
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
     padding-right: 40px;
@@ -453,7 +505,6 @@ main{
     margin-top: 45px;
 }
 .letter>li{
-    /* border: 1px solid red; */
     width: 375px;
 }
 .letter>li>img{
@@ -461,12 +512,10 @@ main{
     height: 375px;
     object-fit: cover;
 }
-.letter>li>img:hover{}
 .Ltext{
-    /* border: 1px solid green; */
     width: 100%;
     height: 130px;
-    padding-bottom: 10px;
+    padding-bottom: 15px;
     position: relative;
 }
 .Ltext::before{
@@ -487,7 +536,7 @@ main{
 .Ltext>a{
     font-size: 21px;
     position: absolute;
-    left: 5px;top: 38px;
+    left: 5px;top: 43px;
 }
 .Ltext>p{
     color: #999;
@@ -503,7 +552,6 @@ footer{
     padding:70px 0;
 }
 .innerfooter{
-    /* border: 1px solid red; */
     width: 1620px;
     height: 110px;
     margin: 0 auto;
@@ -554,6 +602,7 @@ footer{
     position: absolute;
     left: 0;bottom: 0;
 }
+
 .f_right{
     width: 205px;
     display: flex;
