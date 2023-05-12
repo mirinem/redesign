@@ -8,8 +8,9 @@ ul,ol{list-style: none;}
 
 html{
     /* font-family: 'Cormorant Garamond', serif; */
-    font-family: 'Noto Sans KR', sans-serif;
     /* font-family: 'Poppins', sans-serif; */
+    /* font-family: 'Roboto Mono', monospace; */
+    font-family: 'Noto Sans KR', sans-serif;
     font-size: 16px;
 }
 
@@ -176,16 +177,16 @@ main{
     transform: translate(-50%, -50%);
     z-index: 20;
     text-align: center;
-    color: white;
 }
 .flotingTxt>h2{
     font-family: 'Cormorant Garamond', serif;
     font-size: 72px;
     font-weight: 500;
+    color: #2af598;
 }
 .flotingTxt>a{
     font-size: 24px;
-    font-weight: 400;
+    color: white;
 }
 
 .introduce{
@@ -317,6 +318,7 @@ main{
     font-size: 59px;
     margin-bottom: 10px;
     letter-spacing: -1px;
+
 }
 .flotingTxt2>li>a{
     font-family: 'Poppins', sans-serif;
@@ -324,6 +326,7 @@ main{
     padding-right: 60px;
     background: url(../../img/main/logo_etc/viewmore.png) no-repeat 100% 50%;
     background-size: 3rem;
+
 }
 
 .businessArea{
@@ -364,7 +367,7 @@ main{
     background: #250188;
 }
 .sector>li{
-    width: 25%;
+    width: 1920px;
     display: flex;
     justify-content: space-between;
     align-items: center;
