@@ -197,14 +197,6 @@ main{
     justify-content: space-between;
     position: relative;
 }
-.introduce>p{
-    position: absolute;
-    left: 0;top: 50%;
-    transform: translateY(-50%)translateX(-120%)rotate(270deg);
-    font-weight: 500;
-    font-family: 'Poppins', sans-serif;
-    z-index: 50;
-}
 .intro_left{
     width: 50%;
     height: 100%;
@@ -259,7 +251,6 @@ main{
     position: relative;
     overflow: hidden;
 }
-
 .ideology::after{
     content: "";
     position: absolute;
@@ -268,16 +259,6 @@ main{
     background: black;
     opacity: 0.35;
 }
-.ideology>p{
-    position: absolute;
-    left: 0;top: 50%;
-    transform: translateY(-50%)translateX(58%)rotate(270deg);
-    font-weight: 500;
-    font-family: 'Poppins', sans-serif;
-    color: #fff;
-    z-index: 50;
-}
-
 .slide_images{
     width: 100%;
     transform: translateY(0%);    
@@ -286,59 +267,47 @@ main{
 .slide_images>li{
     width: 100%;
     height: 969px;
-    position: relative;
 }
 .slide_images>li>img{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    position: absolute;
-    left: 0; top: 0;
 }
-.ideology .flotingTxt2{
-    width: 100%;
+.flotingTxt2{
+    width: 1620px;
+    height: 729px;    
     margin: 0 auto;
+    color: #999;
+    text-align: right;
     position: absolute;
     left: 50%;top: 50%;
     transform: translate(-50%, -50%);
-    z-index: 20;
-    text-align: right;
-    color: #999;
-    padding: 150px 0;
-}
-.flotingTxt2>li{
-    /* border: 1px solid red; */
-    margin-bottom: 120px;
-    padding-right: 150px;
-}
-.flotingTxt2>li:last-of-type{
-    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: right;
 }
 .flotingTxt2>li>h3{
     font-size: 59px;
     margin-bottom: 10px;
-    letter-spacing: -1px;
-
+    letter-spacing: -1px;    
 }
 .flotingTxt2>li>a{
     font-family: 'Poppins', sans-serif;
     font-size: 34px;
-    padding-right: 60px;
+    padding-right: 70px;
     background: url(../../img/main/logo_etc/viewmore.png) no-repeat 100% 50%;
-    background-size: 3rem;
-
+    background-size: 3.5rem;
 }
 
 .businessArea{
-    /* border: 1px solid lime; */
-    width: 100%;
+    width: 1920px;
     height: 969px;
     margin: 0 auto;
     position: relative;
     overflow: hidden;
 }
 .businessArea>h2{
-
     font-family: 'Poppins', sans-serif;
     font-size: 100px;
     font-weight: 500;
@@ -347,16 +316,8 @@ main{
     left: 150px;top: 120px;
     z-index: 20;
 }
-.businessArea>p{
-    position: absolute;
-    left: 0;top: 50%;
-    transform: translateY(-50%)translateX(58%)rotate(270deg);
-    font-weight: 500;
-    font-family: 'Poppins', sans-serif;
-    color: #fff;
-    z-index: 50;
-}
-.businessArea .sector{
+
+.sector{
     width: 400%;
     height: 100%;
     display: flex;
@@ -364,19 +325,20 @@ main{
     align-items: center;
     transform: translateX(0%);    
     transition: all 0.5s ease 0s;
-    background: #250188;
+    background: #250188;    
 }
 .sector>li{
-    width: 1920px;
+    width: 25%;
+    height: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center;    
 }
 .sector .text{
     width: 390px;
     height: 665px;
-    position: relative;
     margin-left: 150px;
+    position: relative;
 }
 .text::before{
     content: "";
@@ -386,23 +348,6 @@ main{
     height: 3px;
     background: #eee;
 }
-.sector .images{
-    /* border: 1px solid red; */
-    display: flex;
-    position: relative;
-}
-.sector .images>img:nth-of-type(1){
-    height: 665px;
-    width: 500px;
-    object-fit: cover;
-}
-.sector .images>img:nth-of-type(2){
-    height: 665px;
-    width: 860px;
-    object-fit: cover;
-    margin-left: 10px;
-}
-
 .text>h4{
     font-size: 24px;
     font-weight: 500;
@@ -435,6 +380,21 @@ main{
     background: url(../../img/main/logo_etc/viewmore.png) no-repeat 100% 50%;
     color: #999;
 }
+.sector .images{
+    display: flex;
+}
+.images>img:nth-of-type(1){
+    height: 665px;
+    width: 500px;
+    object-fit: cover;
+}
+.images>img:nth-of-type(2){
+    height: 665px;
+    width: 860px;
+    object-fit: cover;
+    margin-left: 10px;
+}
+
 .controler{
 
     position: absolute;
@@ -481,15 +441,7 @@ main{
     margin-top: -45px;
 
 }
-.news>p.side_info{
-    position: absolute;
-    left: 0;top: 50%;
-    transform: translateY(-50%)translateX(-103%)rotate(270deg);
-    font-weight: 500;
-    font-family: 'Poppins', sans-serif;
-    z-index: 50;
-}
-.news>h2+p{
+.news>p{
     font-size: 24px;
     text-align: center;
 }
