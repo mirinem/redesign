@@ -1,5 +1,20 @@
 
 window.onload = function(){
+
+
+    let btnOpen = document.querySelector(".lagIcon")
+    let lagState = false
+    btnOpen.addEventListener("click",function(){
+        if(lagState == false){
+            document.querySelector(".languageFloat").classList.add("show")
+            lagState = true
+        }else{
+            document.querySelector(".languageFloat").classList.remove("show")
+            lagState = false
+        }
+        
+    })
+
    
     let nextBtn = document.querySelector(".btnNext")
     let prevBtn = document.querySelector(".btnPrev")
