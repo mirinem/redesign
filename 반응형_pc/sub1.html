@@ -8,13 +8,132 @@
     <link rel="stylesheet" href="./css/hs_index_pc.css">
     <link rel="stylesheet" href="./css/hs_index_mo.css">
     <link rel="stylesheet" href="./css/hs_index.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script src="./js/hs_index.js"></script>
+    <script src="./js/hs_sub1.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Poppins:wght@200;300;400;500;600;700;800&family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css" />
 </head>
 <body>
+    <nav class="moMenu">
+        <div class="blackCover"></div>
+        <div class="moGnb">
+            <ul class="molanguageFloat">
+                <li><a href="#">KOR</a></li>
+                <li><a href="#">ENG</a></li>
+                <li><a href="#">CHS</a></li>
+            </ul>
+            <div class="mobileMenu">
+                <ul class="mobileMenuList">
+                    <li>
+                        <a href="#">효성소개</a>
+                        <ul>
+                            <li><a href="#">기업소개</a></li>
+                            <li><a href="#">연혁</a></li>
+                            <li><a href="#">Hyosung Way</a></li>
+                            <li><a href="#">글로벌 네트워크</a></li>
+                            <li><a href="#">연구개발</a></li>
+                            <li><a href="#">CI</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">사업분야</a>
+                        <ul>
+                            <li><a href="#">섬유/무역</a></li>
+                            <li><a href="#">중공업/건설</a></li>
+                            <li><a href="#">산업자재</a></li>
+                            <li><a href="#">화학</a></li>
+                            <li><a href="#">정보통신</a></li>
+                            <li><a href="#">기타</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">지속가능경영</a>
+                        <ul>
+                            <li><a href="#">나눔경영</a></li>
+                            <li><a href="#">그린경영</a></li>
+                            <li><a href="#">안전보건</a></li>
+                            <li><a href="#">윤리경영</a></li>
+                            <li><a href="#">지속가능경영</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">투자정보</a>
+                        <ul>
+                            <li><a href="#">기업지배구조</a></li>
+                            <li><a href="#">재무정보</a></li>
+                            <li><a href="#">주식정보</a></li>
+                            <li><a href="#">공시정보</a></li>
+                            <li><a href="#">IR정보</a></li>
+                            <li><a href="#">연차보고서</a></li>
+                            <li><a href="#">공고</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">미디어센터</a>
+                        <ul>
+                            <li><a href="#">뉴스룸</a></li>
+                            <li><a href="#">My Friend 효성</a></li>
+                            <li><a href="#">영상</a></li>
+                            <li><a href="#">소셜미디어</a></li>
+                            <li><a href="#">브로슈어</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">인재채용</a>
+                        <ul>
+                            <li><a href="#">인재상</a></li>
+                            <li><a href="#">인재경영</a></li>
+                            <li><a href="#">채용정보</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="moContactUs">CONTACT US</a>
+                    </li>
+                </ul>
+                <ul class="moSnsMenu">
+                    <li>
+                        <a href="https://blog.hyosung.com" target="_blank">
+                            <img src="../img/main/mobile/blog_mo.png" alt="블로그">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://post.naver.com/my.naver?memberNo=40611273" target="_blank">
+                            <img src="../img/main/mobile/Npost_mo.png" alt="네이버포스트">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/myfriendhyosung" target="_blank">
+                            <img src="../img/main/mobile/facebook_mo.png" alt="페이스북">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/hyosung.group_official/" target="_blank">
+                            <img src="../img/main/mobile/instagram_mo.png" alt="인스타그램">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/@Hyosung_TV" target="_blank">
+                            <img src="../img/main/mobile/youtube_mo.png" alt="유튜브">
+                        </a>
+                    </li>
+                </ul>  
+            </div>          
+        </div>
+    </nav>
+    <header class="mo">
+        <div class="innerHeader2">
+            <h1 class="moLogo"><a href="#"><img src="../img/logo/hyosung_ci_white.png" alt="효성 로고"></a></h1>
+            <div class="btnMoMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
     <div class="his_subGnb">
         <ul>
             <li>1960 - 1970</li>
@@ -30,7 +149,7 @@
         <li><a href="#">CHS</a></li>
     </ul>
     <div class="container">
-        <header>
+        <header class="pc">
             <div class="innerHeader">
                 <div class="logoArea">
                     <h1>
@@ -118,6 +237,26 @@
             </div>
         </header>
         <main>
+            <div class="popup-history">               
+                <div class="popup-row"> 
+                    <span class="btnPopupClose">
+                        <img src="../img/sub1/icon/closeBtn.png" alt="팝업닫기버튼">
+                    </span>                  
+                    <h2>1985</h2>
+                    <div class="popupImg">
+                        <img src="../img/sub1/효성의역사/1985(2).jpg" alt="1985_스틸코드생산 이미지">
+                    </div>
+                    <div class="popupText">
+                        <h3>스틸코드 생산</h3>
+                        <p>
+                            스틸코드 사업에 진출하여<br> 
+                            나일론 및 폴리에스터 타이어코드지, 스틸코드 등<br> 
+                            타이어의 3대 보강재를 모두 생산하는<br>
+                            국내 유일의 종합 타이어 보강재 메이커로 도약합니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
             <div class="hisBanner">
                 <div class="hisb_image"><img src="../img/sub1/sub_page1.jpg" alt="배너이미지"></div>
                 <div class="hisb_text">
@@ -373,7 +512,7 @@
                                 <dd>
                                     <ul>
                                         <li>효성NAS(주) 설립</li>
-                                        <li>안양종합연구동 완공<span class="addButton"></span></li>
+                                        <li>안양종합연구동 완공, 스틸코드 생산<span class="addButton btn1985"></span></li>
                                         <li>금융자동화기기, IT산업 진출 확대</li>
                                     </ul>
                                 </dd>
@@ -830,7 +969,8 @@
             <div class="innerfooter">
                 <div class="F_scroll">
                     <a href="#">
-                        <img src="../img/main/logo_etc/scroll_asset3.png" alt="스크롤 아이콘 이미지">
+                        <img src="../img/main/logo_etc/scroll_asset3.png" alt="스크롤 피씨 아이콘 이미지" class="pcScroll">
+                        <img src="../img/main/mobile/scroll_asset.png" alt="스크롤 모바일 아이콘 이미지" class="moScroll">
                     </a>                    
                 </div>  
                 <div class="f_left">
@@ -841,6 +981,10 @@
                         <li><a href="#">법적고지</a></li>
                         <li class="green"><a href="#">개인정보처리방침</a></li>
                         <li><a href="#">신고센터</a></li>
+                    </ul>
+                    <ul class="moSite">
+                        <li><a href="#">Family Site</a></li>
+                        <li><a href="#">Site Map</a></li>
                     </ul>
                     <ul class="address">
                         <li>

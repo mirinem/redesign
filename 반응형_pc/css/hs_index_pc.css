@@ -7,6 +7,8 @@
 .moIntro_img{display: none;}
 .moBusiText{display: none;}
 .moSec{display: none;}
+.moScroll{display: none;}
+.f_middle .moSite{display: none;}
 
 
     /* header */
@@ -395,7 +397,6 @@ main{
     align-items: center;    
 }
 .sector .text{
-    border: 1px solid aqua;
     width: 390px;
     height: 665px;
     margin-left: 150px;
@@ -639,10 +640,10 @@ footer{
 .F_scroll:hover{
     border: 1px solid #250188;
 }
-.F_scroll img{
+.F_scroll img.pcScroll{
     transition: all 0.5s ease 0.2s;
 }
-.F_scroll:hover img{
+.F_scroll:hover img.pcScroll{
     transform: translateY(-40px);
 }
 
@@ -806,10 +807,101 @@ span.addButton::after{
     background: url(../../img/sub1/icon/addIcon.png) no-repeat 50% 50%;
     position: absolute;
     right: 0;top: 50%;
-    transform: translateY(-45%);
+    transform: translateY(-50%);
+    transition: all 0.5s ease 0s;
+    cursor: pointer;
+}
+span.addButton:hover:after{
+    content: "";
+    width: 19px;
+    height: 19px;
+    margin-left: 5px;
+    background: url(../../img/sub1/icon/addIcon_on.png) no-repeat 50% 50%;
 }
 
 /* main */
+
+/* popup-history */
+.popup-history{
+    position: fixed;
+    right: 0; top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    /* transform: translateY(-100%); */
+    transition: all 0.5s ease 0s;
+}
+.popup-history.show{
+    opacity: 1;
+    pointer-events: auto;
+    /* transform: translateY(0%); */
+}
+.popup-row{
+    width: 36%;
+    height: 100vh;
+    background: #250188;
+    position: absolute;
+    right: 10%;top: 0;  
+    padding: 0 30px; 
+    box-sizing: border-box; 
+    margin: 0 auto;
+}
+.btnPopupClose{
+    position: absolute;
+    right: 30px;top: 40px; 
+    cursor: pointer;  
+}
+.popup-row>h2{
+    /* border: 1px solid aqua; */
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    font-weight: 500;
+    color: #c6a06a;
+    margin-top: 180px;
+    transition: all 0.5s ease 0.15s;
+}
+.popupImg{
+    width: 100%;
+    height: 356px;
+    overflow: hidden;
+    margin-top: 45px;
+    transition: all 0.5s ease 0.2s;
+}
+.popupImg>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.popupText{
+    color: #fff;
+    margin-top: 40px;
+    transition: all 0.5s ease 0.25s;
+}
+.popupText>h3{
+    font-size: 24px;
+    padding-bottom: 25px;
+    position: relative;
+}
+.popupText>h3::after{
+    content: "";
+    position: absolute;
+    left: 0; bottom: 0;
+    width: 20px;
+    height: 2px;
+    background: #c6a06a;
+}
+.popupText>p{
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 30px;
+    margin-top: 25px;
+}
+
+
+/* hisBanner */
 .hisBanner{
     height: 969px;
     position: relative;    
@@ -1004,6 +1096,7 @@ span.addButton::after{
     position: relative;
 }
 .his1960_middle dd li{
+
     width: 100%;
     margin-bottom: 6px;
     position: relative;
@@ -1457,6 +1550,7 @@ span.addButton::after{
     padding-top: 0;
 }
 .his2010_middle dd{
+    /* border: 1px solid red; */
     width: 310px;
     font-size: 18px;
     padding: 14px 0;

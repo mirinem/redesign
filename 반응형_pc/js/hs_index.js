@@ -1,6 +1,8 @@
 
 window.onload = function(){
 
+    
+
 
     let btnOpen = document.querySelector(".lagIcon")
     let lagState = false
@@ -25,8 +27,8 @@ window.onload = function(){
     
     let pagiList = document.querySelectorAll(".pagination>li")
 
-    nextBtn.addEventListener("click",function(event){           
-        event.preventDefault()
+    nextBtn.addEventListener("click",function(e){           
+        e.preventDefault()
          
         count++    
         if(count>3){count=0} 
@@ -57,7 +59,6 @@ window.onload = function(){
         
     })
 
-
     for(let k=0;k<trainList.length; k++){
         pagiList[k].addEventListener("click",function(){
 
@@ -71,8 +72,7 @@ window.onload = function(){
     
             train.style.transform = `translateX(-${25*k}%)`
         })
-    }
+    }  
     
-
-
+    
 }
