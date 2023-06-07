@@ -9,6 +9,7 @@
 .moSec{display: none;}
 .moScroll{display: none;}
 .f_middle .moSite{display: none;}
+.moHis{display: none;}
 
 
     /* header */
@@ -816,7 +817,7 @@ span.addButton:hover:after{
     width: 19px;
     height: 19px;
     margin-left: 5px;
-    background: url(../../img/sub1/icon/addIcon_on.png) no-repeat 50% 50%;
+    background: url(../../img/sub1/icon/addIcon_on.png) no-repeat 50% 50%; 
 }
 
 /* main */
@@ -852,7 +853,7 @@ span.addButton:hover:after{
 .btnPopupClose{
     position: absolute;
     right: 30px;top: 40px; 
-    cursor: pointer;  
+    cursor: pointer; 
 }
 .popup-row>h2{
     /* border: 1px solid aqua; */
@@ -1043,14 +1044,12 @@ span.addButton:hover:after{
     position: relative;
 }
 .his1960_left>h3{
-    /* border: 1px solid red; */
     font-family: 'Roboto Mono', monospace;
     font-size: 20px;
     font-weight: 500;
     color: #250188;
 }
 .his1960_left>p{
-    /* border: 1px solid red; */
     width: 425px;
     font-family: 'Cormorant Garamond', serif;
     font-size: 100px;
@@ -1070,7 +1069,7 @@ span.addButton:hover:after{
     width: 100px;
 }
 .his1960_middle>ul.year1960>li:first-of-type{
-    margin-bottom: 267px;
+    margin-bottom: 246px;
 }
 .his1960_middle>ul.year1960>li>h4{
     font-family: 'Roboto Mono', monospace;
