@@ -1,9 +1,47 @@
 
 window.onload = function(){
 
+
+    //화면스크롤 부드럽게 이동
+    const body = new Scrooth({ 
+        acceleration:2.0,       
+        strength:18,
+        deceleration:0.97
+      });
+      
+          
+    // 상단 메뉴바 스크롤 시 변화
+    $(function(){
+
+        
+        let prevScrollTop = 0;
+      
+        document.addEventListener("scroll", function(){            
+            let nowScrollTop = $(window).scrollTop();
+
+            if (nowScrollTop > prevScrollTop){
+                // $("header").addClass('down');
+                $("header").removeClass('up');  
+            }else {
+                // $("header").removeClass('down');
+                $("header").addClass('up'); 
+            } 
+            prevScrollTop = nowScrollTop; 
+
+            if(nowScrollTop > 400){
+                $("header").addClass("down")
+            }else{
+                $("header").removeClass("down")
+                $("header").removeClass('up');
+            }
+      
+        });
+
+              
+    })
+
     
-
-
+    // 상단 메뉴바 언어영역 애니메이션
     let btnOpen = document.querySelector(".lagIcon")
     let lagState = false
     btnOpen.addEventListener("click",function(){
@@ -17,7 +55,20 @@ window.onload = function(){
         
     })
 
-   
+    
+    // 배너 슬라이드 무한 재생
+    setInterval(fnSlide, 3000);
+
+    function fnSlide() {
+        $("ul.b_images").animate({ "translateX": "-20%" }, 1500, function(){                      
+            $("li.bS_img:first-child").insertAfter("li.bS_img:last-child");
+        });        
+    };
+    
+
+
+
+    //  사업분야 슬라이드 
     let nextBtn = document.querySelector(".btnNext")
     let prevBtn = document.querySelector(".btnPrev")
     let train = document.querySelector(".sector")
@@ -73,6 +124,13 @@ window.onload = function(){
             train.style.transform = `translateX(-${25*k}%)`
         })
     }  
-    
+
+    // 하단 top 버튼 
+    $(".F_scroll").click(function(e){   
+        
+        e.preventDefault()
+        $("html,body").stop().animate({scrollTop:0},2000)       
+    })
+
     
 }

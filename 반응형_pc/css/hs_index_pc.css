@@ -10,6 +10,9 @@
 .moScroll{display: none;}
 .f_middle .moSite{display: none;}
 .moHis{display: none;}
+.slide_images{display: none;}
+.flotingTxt2{display: none;}
+
 
 
     /* header */
@@ -22,7 +25,7 @@ header{
     color: white;
     font-weight: 500;
     overflow: hidden;
-    transition: all 0.5s ease 0s ;
+    transition: all 0.7s ease 0s ;
     z-index: 100;
 }
 header:hover{
@@ -38,6 +41,15 @@ header::after{
     height: 1px;
     background: #666;
 }
+header.down{
+    top: -95px;
+}
+header.up{
+    top: 0;
+    background: rgba(0, 0, 0,0.7);
+    backdrop-filter: blur(100px);
+}
+
 .innerHeader{
     width: 1620px;
     height: 95px;
@@ -193,8 +205,8 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: translateX(0%);    
-    transition: all 0.5s ease 0s;
+    /* transform: translateX(0%);     */
+    /* transition: all 0.5s ease 0s; */
 }
 .b_images>li{
     flex: 1;
@@ -206,8 +218,7 @@ main{
     position: absolute;
     left: 0; top: 0;
     width: 100%;height: 100%;
-    background: black;
-    opacity: 0.5;
+    background: rgba(0, 0, 0,0.4);
 }
 .b_images>li>img{
     width: 100%;
@@ -234,6 +245,7 @@ main{
     color: white;
 }
 
+/* introduce */
 .introduce{
     width: 1620px;
     height: 969px;
@@ -295,7 +307,120 @@ main{
     text-align: right;
 }
 
+/* ideology */
 .ideology{
+    /* border: 1px solid green; */
+    width: 100%;
+    height: 3600px;
+    margin-top: 200px;
+    margin-bottom: 200px;
+}
+.imgbox img{
+    display: block;
+    margin: 0 auto;
+    max-width: 90%;    
+}
+.imgbox { 
+    /* border: 1px solid green; */
+    position : sticky;
+    top : 200px;
+    margin-top : 100px;
+    transition: all 0.3s;
+}
+/* .imgbox::after{
+    content: "";
+    position: absolute;
+    left: 0; top: 0;
+    width: 90%;height: 100%;
+    background: black;
+    opacity: 0.35;
+} */
+.ideoText {
+    /* border: 1px solid blue; */
+    position : sticky;
+    top : 50px;
+    margin-top: 20px;
+}
+.ideoText>h2{
+    font-family: 'Poppins', sans-serif;
+    font-size: 100px;
+    font-weight: 500;
+    text-align: center;
+}
+.flotxt{
+    position: absolute;
+    left: 50%;top: 100px;
+    transform: translateX(-50%);
+    z-index: 20;
+}
+.flotxt>h3{
+    color: #fff;
+    font-size: 58px;
+    text-align: center;
+    line-height: 78px;
+}
+.flotxt2{
+    position: absolute;
+    left: 50%;top: 100px;
+    transform: translateX(-50%);
+    z-index: 20;
+}
+.flotxt2>h3{
+    color: #000;
+    font-size: 58px;
+    text-align: center;
+    line-height: 78px;
+}
+.flotxt3{
+    /* border: 1px solid aqua; */
+    width: 82%;
+    position: absolute;
+    left: 50%;top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+}
+.flotxt3 li{
+    color: #fff;   
+    text-align: right;
+    margin-bottom: 100px;
+}
+.flotxt3 li:last-of-type{
+    margin-bottom: 0px;
+}
+.flotxt3 li h3{
+    font-size: 58px;
+    margin-bottom: 10px;
+    letter-spacing: -1px; 
+    transition: all 0.5s ease 0s;   
+}
+.flotxt3 li a{
+    font-family: 'Poppins', sans-serif;
+    font-size: 34px;
+    padding-right: 65px;
+    background: url(../../img/main/logo_etc/viewmore_on2.png) no-repeat 99% 51%;
+    background-size: 2.8rem;
+    transition: all 0.5s ease 0s;
+}
+.flotxt3 li:hover a{
+    background: url(../../img/main/logo_etc/viewmore_on3.png) no-repeat 99% 51%;
+    color: #2af598;
+    background-size: 2.8rem;
+}
+.flotxt3 li:hover h3{
+    color: #2af598;   
+}
+.downup{
+    transform: translateY(50px);
+    opacity: 0;
+    transition: all 0.5s ease 0.2s;
+}
+.downup.on{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+/* .ideology{
+    border: 1px solid red;
     width: 100%;
     height: 969px;
     margin: 0 auto;
@@ -310,6 +435,12 @@ main{
     background: black;
     opacity: 0.35;
 }
+.ideoText>h2{
+    font-family: 'Poppins', sans-serif;
+    font-size: 100px;
+    font-weight: 500;
+    text-align: center;
+}
 .slide_images{
     width: 100%;
     transform: translateY(0%);    
@@ -323,8 +454,8 @@ main{
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
-.flotingTxt2{
+} */
+/* .flotingTxt2{
     width: 1620px;
     height: 729px;    
     margin: 0 auto;
@@ -352,11 +483,15 @@ main{
     background-size: 3rem;
     transition: all 0.5s ease 0s;
 }
-.flotingTxt2>li a:hover{
+.flotingTxt2>li:hover a{
     background: url(../../img/main/logo_etc/viewmore_on2.png) no-repeat 99% 50%;
     color: #fff;
     background-size: 3rem;
 }
+.flotingTxt2>li:hover>h3{
+    color: #fff;   
+} */
+
 
 .businessArea{
     width: 100%;
@@ -2220,9 +2355,11 @@ span.addButton:hover:after{
 .CDPreport{
     width: 1920px;
     height: 1280px;
-    object-fit: cover;
     margin: 0 auto;
     position: relative;
+    background: url(../../img/sub3/orola.jpg) no-repeat 50% 50%;
+    background-attachment: fixed;
+    background-size: cover;
 }
 .CDPreport::after{
     content: "";
@@ -2231,11 +2368,6 @@ span.addButton:hover:after{
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0,0.5);    
-}
-.CDPreport>img{
-    width: 1920px;
-    height: 1280px;
-    object-fit: cover;
 }
 .CDP_text{
     /* border: 1px solid red; */
