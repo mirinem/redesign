@@ -12,10 +12,16 @@
 .moHis{display: none;}
 .slide_images{display: none;}
 .flotingTxt2{display: none;}
+.mo_infoH{display: none;}
+.Btextile>.mo_Btextile{display: none;}
+.Bindustry>.mo_Bindustry{display: none;}
+.Bmaterial>.mo_Bmaterial{display: none;}
+.Bchemical>.mo_Bchemical{display: none;}
+.Bother>.mo_Bcommu{display: none;}
+.underVacu{display: none;}
 
 
-
-    /* header */
+/* header */
 header{
     margin: 0 auto;
     width: 100%;
@@ -313,7 +319,7 @@ main{
     width: 100%;
     height: 3600px;
     margin-top: 200px;
-    margin-bottom: 200px;
+    margin-bottom: 300px;
 }
 .imgbox img{
     display: block;
@@ -327,16 +333,16 @@ main{
     margin-top : 100px;
     transition: all 0.3s;
 }
-/* .imgbox::after{
+.imgbox:after{
     content: "";
     position: absolute;
-    left: 0; top: 0;
+    left: 50%; top: 0;
+    transform: translateX(-50%);
     width: 90%;height: 100%;
-    background: black;
-    opacity: 0.35;
-} */
+    background: rgba(0,0,0,0.4);
+    z-index: 15;
+}
 .ideoText {
-    /* border: 1px solid blue; */
     position : sticky;
     top : 50px;
     margin-top: 20px;
@@ -347,29 +353,31 @@ main{
     font-weight: 500;
     text-align: center;
 }
+.floline{
+    display: flex;
+    width: 2px;
+    height: 500px;
+    background: #fff;  
+}
 .flotxt{
+    margin: 0 auto;
+    width: 90%;
     position: absolute;
-    left: 50%;top: 100px;
-    transform: translateX(-50%);
+    left: 5%;top: 120px;
     z-index: 20;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 .flotxt>h3{
+    /* border: 1px solid aqua; */
     color: #fff;
     font-size: 58px;
+    line-height: 80px;  
+    margin-bottom: 60px;  
     text-align: center;
-    line-height: 78px;
-}
-.flotxt2{
-    position: absolute;
-    left: 50%;top: 100px;
-    transform: translateX(-50%);
-    z-index: 20;
-}
-.flotxt2>h3{
-    color: #000;
-    font-size: 58px;
-    text-align: center;
-    line-height: 78px;
 }
 .flotxt3{
     /* border: 1px solid aqua; */
@@ -390,8 +398,7 @@ main{
 .flotxt3 li h3{
     font-size: 58px;
     margin-bottom: 10px;
-    letter-spacing: -1px; 
-    transition: all 0.5s ease 0s;   
+    letter-spacing: -1px;        
 }
 .flotxt3 li a{
     font-family: 'Poppins', sans-serif;
@@ -399,7 +406,6 @@ main{
     padding-right: 65px;
     background: url(../../img/main/logo_etc/viewmore_on2.png) no-repeat 99% 51%;
     background-size: 2.8rem;
-    transition: all 0.5s ease 0s;
 }
 .flotxt3 li:hover a{
     background: url(../../img/main/logo_etc/viewmore_on3.png) no-repeat 99% 51%;
@@ -409,10 +415,28 @@ main{
 .flotxt3 li:hover h3{
     color: #2af598;   
 }
+.mrtl{
+    transform: translateX(50px);
+    opacity: 0;
+    transition: all 0.7s ease 0s;
+}
+.mrtl.on{
+    transform: translateX(0px);
+    opacity: 1;
+}
+.mltr{
+    transform: translateX(-50px);
+    opacity: 0;
+    transition: all 0.7s ease 0s;
+}
+.mltr.on{
+    transform: translateX(0px);
+    opacity: 1;
+}
 .downup{
     transform: translateY(50px);
     opacity: 0;
-    transition: all 0.5s ease 0.2s;
+    transition: all 0.7s ease 0s;
 }
 .downup.on{
     transform: translateY(0px);
@@ -719,6 +743,10 @@ main{
     background: #250188;
     transition: all 0.5s ease 0s;
 }
+.news .letter>li:nth-of-type(1){transition: all 0.7s ease 0.2s;}
+.news .letter>li:nth-of-type(2){transition: all 0.7s ease 0.4s;}
+.news .letter>li:nth-of-type(3){transition: all 0.7s ease 0.6s;}
+.news .letter>li:nth-of-type(4){transition: all 0.7s ease 0.8s;}
 .letter>li:hover .Ltext::before{
     content: "";
     position: absolute;
@@ -727,15 +755,15 @@ main{
     height: 200px;
     background: #250188;
 }
+.letter>li:hover .Ltext{
+    color: #fff;
+}
 .Ltext>h3{
     font-family: 'Poppins', sans-serif;
     font-size: 18px;
     font-weight: 500;
     position: absolute;
     left: 5px;top: 10px;
-}
-.letter>li:hover .Ltext{
-    color: #fff;
 }
 .Ltext>a{
     font-size: 21px;

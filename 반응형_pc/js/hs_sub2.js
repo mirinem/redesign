@@ -3,9 +3,9 @@ $(document).ready(function(){
 
     //화면스크롤 부드럽게 이동
     const body = new Scrooth({ 
-        acceleration:2.4,       
-        strength:20,
-        deceleration:0.97
+        acceleration:1.7,       
+        strength:19,
+        deceleration:0.95
       });
       
           
@@ -52,6 +52,43 @@ $(document).ready(function(){
         
     })
     
+
+    // 모바일 계열사 슬라이드
+    let count = 0;
+    
+    let perView;    
+    let stationWidth;
+    let trainWidth;
+
+    let winWidth = $(window).width()
+    perView = 1.5
+            stationWidth = $(".affiliate").width()
+            trainWidth = stationWidth * 5 / perView
+            $(".affiliate>ul").width(trainWidth)
+
+
+
+    $(".btnNext2").click(function(e){
+        count++
+        e.preventDefault()
+        if(count>4){count=0}
+        moveSlider(count)
+    })
+
+    $(".btnPrev2").click(function(e){
+        count--
+        e.preventDefault()
+        if(count<0){count=4}
+        moveSlider(count)
+    })
+
+    function moveSlider(idx){
+        $(".affiliate>ul").css("transform","translateX("+(-20*idx)+"%)")
+    }
+    moveSlider(1)
+
+
+
 
     $(".F_scroll").click(function(e){   
         

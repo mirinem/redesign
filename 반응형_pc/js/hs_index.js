@@ -4,9 +4,9 @@ window.onload = function(){
 
     //화면스크롤 부드럽게 이동
     const body = new Scrooth({ 
-        acceleration:2.0,       
-        strength:18,
-        deceleration:0.97
+        acceleration:1.7,       
+        strength:19,
+        deceleration:0.95
       });
       
           

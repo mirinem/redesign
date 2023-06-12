@@ -28,7 +28,24 @@ $(document).ready(function(){
 
     // 내용 나타나기
     $(".flotxt3>ul>li").each(function(){
-        $(this).addClass("on")        
-})
+            $(this).addClass("downup")        
+    })
+    
+
+    $(window).scroll(function(){
+        let winst = $(window).scrollTop() 
+        let winHeight = $(window).height()*0.5 // 브라우저화면의 높이를 계산
+
+        $(".mltr,.mrtl,.downup,.blind").each(function(){
+            if(winst+winHeight>$(this).offset().top){
+                $(this).addClass("on")
+            }else{
+                $(this).removeClass("on")
+            }
+        })
+
+    })
+
+
 
 })
