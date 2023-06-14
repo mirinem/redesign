@@ -3,9 +3,9 @@ $(document).ready(function(){
 
     //화면스크롤 부드럽게 이동
     const body = new Scrooth({ 
-        acceleration:1.7,       
-        strength:19,
-        deceleration:0.95
+        acceleration:2.0,       
+        strength:18,
+        deceleration:0.94
       });
       
           
@@ -96,6 +96,38 @@ $(document).ready(function(){
         return false
     })
 
+
+    // (모바일) 상단 메뉴바 스크롤 시 변화
+    $(function(){
+
+        
+        let prevScrollTop2 = 0;
+      
+        document.addEventListener("scroll", function(){            
+            let nowScrollTop2 = $(window).scrollTop();
+
+            if (nowScrollTop2 > prevScrollTop2){               
+                $("header.mo").removeClass('up');  
+                $("input#btnMoMenu+label").removeClass("up")
+            }else {               
+                $("header.mo").addClass('up'); 
+                $("input#btnMoMenu+label").addClass("up")
+            } 
+            prevScrollTop2 = nowScrollTop2; 
+
+            if(nowScrollTop2 > 300){
+                $("header.mo").addClass("down")
+                $("input#btnMoMenu+label").addClass("down")
+            }else{
+                $("header.mo").removeClass("down")
+                $("header.mo").removeClass('up');
+                $("input#btnMoMenu+label").removeClass("down")
+            }
+      
+        });
+      
+    })
+    
     
     // (모바일) 계열사 슬라이드
     let count = 0;
@@ -205,6 +237,19 @@ $(document).ready(function(){
     })
 
 
+    // 내용 나타나기    
+    
+    $(window).scroll(function(){
+        let winst = $(window).scrollTop() 
+        let winHeight = $(window).height()*0.4 // 브라우저화면의 높이를 계산
+
+        $(".mltr,.mrtl,.downup,.blind").each(function(){
+            if(winst+winHeight>$(this).offset().top){
+                $(this).addClass("on")
+            }
+        })
+
+    })
 
 
     // top 버튼 

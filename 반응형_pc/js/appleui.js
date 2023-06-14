@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-    // 경영이념 슬라이드
+    // 지속가능경영이념 슬라이드
     $(window).scroll(function(){
         let height = $(window).scrollTop();
         console.log(height);
@@ -39,8 +39,6 @@ $(document).ready(function(){
         $(".mltr,.mrtl,.downup,.blind").each(function(){
             if(winst+winHeight>$(this).offset().top){
                 $(this).addClass("on")
-            }else{
-                $(this).removeClass("on")
             }
         })
 

@@ -19,7 +19,44 @@
 .Bchemical>.mo_Bchemical{display: none;}
 .Bother>.mo_Bcommu{display: none;}
 .underVacu{display: none;}
-.btnMoMenu{display: none;}
+#btnMoMenu{display: none;}
+.mo_middleS_img{display: none;}
+
+
+/* animate effect */
+.mrtl{
+    transform: translateX(50px);
+    opacity: 0;
+    transition: all 0.7s ease 0s;
+}
+.mrtl.on{
+    transform: translateX(0px);
+    opacity: 1;
+}
+.mltr{
+    transform: translateX(-50px);
+    opacity: 0;
+    transition: all 0.7s ease 0s;
+}
+.mltr.on{
+    transform: translateX(0px);
+    opacity: 1;
+}
+.downup{
+    transform: translateY(50px);
+    opacity: 0;
+    transition: all 0.7s ease 0s;
+}
+.downup.on{
+    transform: translateY(0px);
+    opacity: 1;
+}
+.blind{
+    opacity: 0;
+    transition: all 0.7s ease 0s;
+}
+.blind.on{opacity: 1;}
+
 
 /* header */
 header{
@@ -157,11 +194,13 @@ header.up{
     left: 50%;top: 50%;
     transform: translate(-50%,-40%);
     background: url(../../img/main/logo_etc/language_white.png) no-repeat 50% 50%;
+    background-size: contain;
 }
 .lagIcon:hover{
     width: 22px;
     height: 22px;
     background: url(../../img/main/logo_etc/language_on.png) no-repeat 50% 50%;
+    background-size: contain;
 }
 .languageFloat{
     border-radius: 8%;
@@ -398,7 +437,8 @@ main{
 .flotxt3 li h3{
     font-size: 58px;
     margin-bottom: 10px;
-    letter-spacing: -1px;        
+    letter-spacing: -1px;  
+    transition: all 0.5s ease 0s;      
 }
 .flotxt3 li a{
     font-family: 'Poppins', sans-serif;
@@ -406,6 +446,7 @@ main{
     padding-right: 65px;
     background: url(../../img/main/logo_etc/viewmore_on2.png) no-repeat 99% 51%;
     background-size: 2.8rem;
+    transition: all 0.5s ease 0s;
 }
 .flotxt3 li:hover a{
     background: url(../../img/main/logo_etc/viewmore_on3.png) no-repeat 99% 51%;
@@ -415,108 +456,9 @@ main{
 .flotxt3 li:hover h3{
     color: #2af598;   
 }
-.mrtl{
-    transform: translateX(50px);
-    opacity: 0;
-    transition: all 0.7s ease 0s;
-}
-.mrtl.on{
-    transform: translateX(0px);
-    opacity: 1;
-}
-.mltr{
-    transform: translateX(-50px);
-    opacity: 0;
-    transition: all 0.7s ease 0s;
-}
-.mltr.on{
-    transform: translateX(0px);
-    opacity: 1;
-}
-.downup{
-    transform: translateY(50px);
-    opacity: 0;
-    transition: all 0.7s ease 0s;
-}
-.downup.on{
-    transform: translateY(0px);
-    opacity: 1;
-}
-
-/* .ideology{
-    border: 1px solid red;
-    width: 100%;
-    height: 969px;
-    margin: 0 auto;
-    position: relative;
-    overflow: hidden;
-}
-.ideology::after{
-    content: "";
-    position: absolute;
-    left: 0; top: 0;
-    width: 100%;height: 100%;
-    background: black;
-    opacity: 0.35;
-}
-.ideoText>h2{
-    font-family: 'Poppins', sans-serif;
-    font-size: 100px;
-    font-weight: 500;
-    text-align: center;
-}
-.slide_images{
-    width: 100%;
-    transform: translateY(0%);    
-    transition: all 0.5s ease 0s;
-}
-.slide_images>li{
-    width: 100%;
-    height: 969px;
-}
-.slide_images>li>img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-} */
-/* .flotingTxt2{
-    width: 1620px;
-    height: 729px;    
-    margin: 0 auto;
-    color: #999;
-    text-align: right;
-    position: absolute;
-    left: 50%;top: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: right;
-    z-index: 20;
-}
-.flotingTxt2>li>h3{
-    font-size: 59px;
-    margin-bottom: 10px;
-    letter-spacing: -1px;    
-}
-.flotingTxt2>li a{
-    font-family: 'Poppins', sans-serif;
-    font-size: 34px;
-    padding-right: 65px;
-    background: url(../../img/main/logo_etc/viewmore.png) no-repeat 99% 50%;
-    background-size: 3rem;
-    transition: all 0.5s ease 0s;
-}
-.flotingTxt2>li:hover a{
-    background: url(../../img/main/logo_etc/viewmore_on2.png) no-repeat 99% 50%;
-    color: #fff;
-    background-size: 3rem;
-}
-.flotingTxt2>li:hover>h3{
-    color: #fff;   
-} */
 
 
+/* businessArea */
 .businessArea{
     width: 100%;
     height: 969px;
@@ -667,6 +609,8 @@ main{
 }
 .pagination>li.on{opacity: 1;}
 
+
+/* news */
 .news{
     width: 1620px;
     height: 969px;
@@ -929,6 +873,16 @@ footer{
     display: none; 
     z-index: 120;
     align-items: center;
+    transition: all 0.7s ease 0s ;
+}
+.his_subGnb.down{
+    top: 0;
+    display: block; 
+}
+.his_subGnb.up{
+    top: 95px;
+    display: block; 
+    background: #fff;
 }
 .his_subGnb::after{
     content: "";
@@ -948,7 +902,6 @@ footer{
     margin: 0 auto;
 }
 .his_subGnb>ul>li{
-    /* border: 1px solid green; */
     width: 100px;    
     height: 100%;
     font-family: 'Cormorant Garamond', serif;
@@ -960,8 +913,22 @@ footer{
     align-items: center;
     color: #888;
     margin: 0 20px;
+    position: relative;
+}
+.his_subGnb>ul>li:hover{
+    color: #250188;
+    font-weight: 700;
+}
+.his_subGnb>ul>li:hover::after{
+    content: "";
+    position: absolute;
+    left: 0; bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #250188;
 }
 
+/* add button */
 span.addButton::after{
     content: "";
     width: 19px;
@@ -974,6 +941,7 @@ span.addButton::after{
     transform: translateY(-50%);
     transition: all 0.5s ease 0s;
     cursor: pointer;
+    background-size: contain;
 }
 span.addButton:hover:after{
     content: "";
@@ -981,6 +949,7 @@ span.addButton:hover:after{
     height: 19px;
     margin-left: 5px;
     background: url(../../img/sub1/icon/addIcon_on.png) no-repeat 50% 50%; 
+    background-size: contain;
 }
 
 /* main */
@@ -1832,6 +1801,12 @@ span.addButton:hover:after{
     padding-right: 40px;
     background: url(../../img/main/logo_etc/viewmore.png) no-repeat 100% 50%;
     color: #999;
+    transition: all 0.3s linear 0s;
+}
+.infoH_bottom>section:nth-of-type(2)>a:hover{
+    background: url(../../img/main/logo_etc/viewmore_on.png) no-repeat 100% 50%;
+    color: #000;
+    transform: scale(1.05) translateX(5px); 
 }
 .infoH_bottom>section:nth-of-type(2)>p{
     font-size: 18px;
@@ -1885,6 +1860,12 @@ span.addButton:hover:after{
     padding-right: 40px;
     background: url(../../img/main/logo_etc/viewmore.png) no-repeat 100% 50%;
     color: #999;
+    transition: all 0.3s linear 0s;
+}
+.Btextile>div>section:nth-of-type(2)>a:hover{
+    background: url(../../img/main/logo_etc/viewmore_on.png) no-repeat 100% 50%;
+    color: #000;
+    transform: scale(1.05) translateX(5px); 
 }
 .Btextile>div>section:nth-of-type(2)>p{
     font-size: 18px;
@@ -1931,6 +1912,12 @@ span.addButton:hover:after{
     padding-right: 40px;
     background: url(../../img/main/logo_etc/viewmore.png) no-repeat 100% 50%;
     color: #999;
+    transition: all 0.3s linear 0s;
+}
+.Bindustry>div>section:nth-of-type(2)>a:hover{
+    background: url(../../img/main/logo_etc/viewmore_on.png) no-repeat 100% 50%;
+    color: #000;
+    transform: scale(1.05) translateX(5px); 
 }
 .Bindustry>div>section:nth-of-type(2)>p{
     font-size: 18px;
@@ -1977,6 +1964,12 @@ span.addButton:hover:after{
     padding-right: 40px;
     background: url(../../img/main/logo_etc/viewmore.png) no-repeat 100% 50%;
     color: #999;
+    transition: all 0.3s linear 0s;
+}
+.Bmaterial>div>section:nth-of-type(2)>a:hover{
+    background: url(../../img/main/logo_etc/viewmore_on.png) no-repeat 100% 50%;
+    color: #000;
+    transform: scale(1.05) translateX(5px); 
 }
 .Bmaterial>div>section:nth-of-type(2)>p{
     font-size: 18px;
@@ -2023,6 +2016,12 @@ span.addButton:hover:after{
     padding-right: 40px;
     background: url(../../img/main/logo_etc/viewmore.png) no-repeat 100% 50%;
     color: #999;
+    transition: all 0.3s linear 0s;
+}
+.Bchemical>div>section:nth-of-type(2)>a:hover{
+    background: url(../../img/main/logo_etc/viewmore_on.png) no-repeat 100% 50%;
+    color: #000;
+    transform: scale(1.05) translateX(5px); 
 }
 .Bchemical>div>section:nth-of-type(2)>p{
     font-size: 18px;
@@ -2073,6 +2072,12 @@ span.addButton:hover:after{
     padding-right: 40px;
     background: url(../../img/main/logo_etc/viewmore.png) no-repeat 100% 50%;
     color: #999;
+    transition: all 0.3s linear 0s;
+}
+.commu_top>section:nth-of-type(2)>a:hover{
+    background: url(../../img/main/logo_etc/viewmore_on.png) no-repeat 100% 50%;
+    color: #000;
+    transform: scale(1.05) translateX(5px); 
 }
 .commu_top>section>img{
     /* border: 1px solid green; */
@@ -2093,6 +2098,21 @@ span.addButton:hover:after{
 }
 .commu_bottom>ul>li{
     width: 246px;
+}
+.commu_bottom>ul>li:nth-of-type(1){
+    transition: all 0.7s ease 0s;
+}
+.commu_bottom>ul>li:nth-of-type(2){
+    transition: all 0.7s ease 0.2s;
+}
+.commu_bottom>ul>li:nth-of-type(3){
+    transition: all 0.7s ease 0.4s;
+}
+.commu_bottom>ul>li:nth-of-type(4){
+    transition: all 0.7s ease 0.6s;
+}
+.commu_bottom>ul>li:nth-of-type(5){
+    transition: all 0.7s ease 0.8s;
 }
 .blankStyle>img{
     width: 246px;
@@ -2180,20 +2200,62 @@ span.addButton:hover:after{
     font-size: 72px;    
 }
 
-.middleS_img{
+/* middleS_img */
+/* .middleS_img{
     width: 100%;
     height: 969px;
     margin: 0 auto;
     position: relative;
+} */
+.middleS_img_outter{
+    padding-bottom:650px;
+    position:relative;
+    margin: 150px 0;
 }
-.middleS_img>img{
-    width: 1380px;
-    height: 600px;
+.middleS_img {
+    /* border: 1px solid red; */
+    width: 60%;
+    height: 650px;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    top:0;
+    overflow: hidden;
+    /* 위의 틀이 있어 가려진 그림을 보이게 하는 원리 */
+}
+/* .middleS_img>img{
+    width: 1600px;
+    height: 650px;
     object-fit: cover;
     position: absolute;
     right: 0;top: 10%;
+    transition: all 1s ease 0s;
+} */
+.middleS_img>img {
+    /* border: 1px solid blue; */
+    width: 1950px;
+    height: 650px;
+    object-fit: cover;
+    position: absolute;
+    right: 0;
+    top: 0;
+    /* opacity: 0.1; */
+    transition: all 1s ease 0s;
+}
+.blank_door3{
+    /* border: 1px solid green; */
+    background: #fff;
+    width: calc(100% - 1150px);
+    height: 100%;
+    position: absolute;
+    left: 0;top: 0;
+    z-index: 20;
+    /* transform: translateX(0); */
+    transition: all 1s ease 0s;
+    display:none;
 }
 
+/* strategy */
 .strategy{
     width: 100%;
     height: 969px;
@@ -2238,6 +2300,13 @@ span.addButton:hover:after{
 }
 .ss_left>ul>li:nth-of-type(1){
     margin-left: 0;
+    transition: all 0.7s ease 0s;
+}
+.ss_left>ul>li:nth-of-type(2){
+    transition: all 0.7s ease 0.2s;
+}
+.ss_left>ul>li:nth-of-type(3){
+    transition: all 0.7s ease 0.4s;
 }
 .ss_left>ul>li>p{
     font-family: 'Poppins', sans-serif;
@@ -2322,6 +2391,18 @@ span.addButton:hover:after{
 .reporting>ul>li{
     width: 380px;
 }
+.reporting>ul>li:nth-of-type(1){
+    transition: all 0.7s ease 0s;
+}
+.reporting>ul>li:nth-of-type(2){
+    transition: all 0.7s ease 0.2s;
+}
+.reporting>ul>li:nth-of-type(3){
+    transition: all 0.7s ease 0.4s;
+}
+.reporting>ul>li:nth-of-type(4){
+    transition: all 0.7s ease 0.6s;
+}
 .reporting>ul>li>img{
     width: 380px;
     height: auto;
@@ -2353,7 +2434,7 @@ span.addButton:hover:after{
 .reporting>ul>li>ul>li:nth-of-type(2){
     margin-left: 14px;
 }
-.reporting>ul>li>ul>li.on{
+.reporting>ul>li>ul>li:hover{
     border: 1px solid #c6a06a;
     background: #250188;
     color: #c6a06a;
@@ -2371,7 +2452,7 @@ span.addButton:hover:after{
     background: url(../../img/sub3/etc/down_off.png) no-repeat 50% 50%;
 }
 
-.reporting>ul>li>ul>li.on span.download:after{
+.reporting>ul>li>ul>li:hover span.download:after{
     content: "";
     position: absolute;
     right: 18px;top: 50%;

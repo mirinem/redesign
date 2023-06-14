@@ -4,9 +4,9 @@ window.onload = function(){
 
     //화면스크롤 부드럽게 이동
     const body = new Scrooth({ 
-        acceleration:1.7,       
-        strength:19,
-        deceleration:0.95
+        acceleration:2.0,       
+        strength:18,
+        deceleration:0.94
       });
       
           
@@ -56,48 +56,81 @@ window.onload = function(){
     })
 
 
-        // (모바일) 버튼 클릭시 메뉴바 열리게
-        let moMenuState = false;
-        $("#btnMoMenu").click(function(){
+    // (모바일) 버튼 클릭시 메뉴바 열리게
+    let moMenuState = false;
+    $("#btnMoMenu").click(function(){
+
+        
+        if(moMenuState==false){
+            // 메뉴가 현재 닫혀있는 상태 -> 여는기능
+            $("#btnMoMenu").addClass("closed")
+            $("nav.moMenu").addClass("show")
+            moMenuState =true
+        }else{
+            // 메뉴가 현재 열려있는 상태 -> 닫는기능
+            $("#btnMoMenu").removeClass("closed")
+            $("nav.moMenu").removeClass("show")
+            moMenuState =false
+        }
+
+        
+        
+    })
+
+
+    // (모바일) 메뉴바 리스트 클릭
+    $(".mobileMenuList>li").click(function(){
+
+        if($(this).hasClass("on")==true){
+            $(this).css("height","46px")
+            $(this).removeClass("on")
+        }else{
+            $(".mobileMenuList>li").css("height","46px")
+            $(".mobileMenuList>li").removeClass("on")
+            let li2depth = $(this).children("ul").children().length
+            $(this).css("height", ((li2depth)*40+46+28)+"px")
+            // ui여백(28px)+li>a높이(46px) 다 다르기 때문에 더해줘야한다. 이전 참고한 방식은 다 같은 높이였으므로 1을 더한것이다.
+            $(this).addClass("on")
+        }
+
+    })
+
+    $(".mobileMenuList ul").click(function(){
+        return false
+    })
     
-            
-            if(moMenuState==false){
-                // 메뉴가 현재 닫혀있는 상태 -> 여는기능
-                $("#btnMoMenu").addClass("closed")
-                $("nav.moMenu").addClass("show")
-                moMenuState =true
+
+    // (모바일) 상단 메뉴바 스크롤 시 변화
+    $(function(){
+
+        
+        let prevScrollTop2 = 0;
+      
+        document.addEventListener("scroll", function(){            
+            let nowScrollTop2 = $(window).scrollTop();
+
+            if (nowScrollTop2 > prevScrollTop2){               
+                $("header.mo").removeClass('up');  
+                $("input#btnMoMenu+label").removeClass("up")
+            }else {               
+                $("header.mo").addClass('up'); 
+                $("input#btnMoMenu+label").addClass("up")
+            } 
+            prevScrollTop2 = nowScrollTop2; 
+
+            if(nowScrollTop2 > 300){
+                $("header.mo").addClass("down")
+                $("input#btnMoMenu+label").addClass("down")
             }else{
-                // 메뉴가 현재 열려있는 상태 -> 닫는기능
-                $("#btnMoMenu").removeClass("closed")
-                $("nav.moMenu").removeClass("show")
-                moMenuState =false
+                $("header.mo").removeClass("down")
+                $("header.mo").removeClass('up');
+                $("input#btnMoMenu+label").removeClass("down")
             }
-    
-            
-            
-        })
-    
-    
-        // (모바일) 메뉴바 리스트 클릭
-        $(".mobileMenuList>li").click(function(){
-    
-            if($(this).hasClass("on")==true){
-                $(this).css("height","46px")
-                $(this).removeClass("on")
-            }else{
-                $(".mobileMenuList>li").css("height","46px")
-                $(".mobileMenuList>li").removeClass("on")
-                let li2depth = $(this).children("ul").children().length
-                $(this).css("height", ((li2depth)*40+46+28)+"px")
-                // ui여백(28px)+li>a높이(46px) 다 다르기 때문에 더해줘야한다. 이전 참고한 방식은 다 같은 높이였으므로 1을 더한것이다.
-                $(this).addClass("on")
-            }
-    
-        })
-    
-        $(".mobileMenuList ul").click(function(){
-            return false
-        })
+      
+        });
+      
+    })
+
     
         
     // (PC) 배너 슬라이드 무한 재생

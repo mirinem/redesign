@@ -3,9 +3,9 @@ $(document).ready(function(){
 
     //화면스크롤 부드럽게 이동
     const body = new Scrooth({ 
-        acceleration:1.7,       
-        strength:19,
-        deceleration:0.95
+        acceleration:2.0,       
+        strength:18,
+        deceleration:0.94
       });
       
           
@@ -21,17 +21,22 @@ $(document).ready(function(){
             if (nowScrollTop > prevScrollTop){
                 // $("header").addClass('down');
                 $("header").removeClass('up');  
+                $(".his_subGnb").removeClass('up'); 
             }else {
                 // $("header").removeClass('down');
                 $("header").addClass('up'); 
+                $(".his_subGnb").addClass('up'); 
             } 
             prevScrollTop = nowScrollTop; 
 
             if(nowScrollTop > 400){
                 $("header").addClass("down")
+                $(".his_subGnb").addClass("down"); 
             }else{
                 $("header").removeClass("down")
                 $("header").removeClass('up');
+                $(".his_subGnb").removeClass("down")
+                $(".his_subGnb").removeClass('up');
             }
       
         });
@@ -96,6 +101,62 @@ $(document).ready(function(){
     })
     
 
+    // (모바일) 상단 메뉴바 스크롤 시 변화
+    $(function(){
+
+        
+        let prevScrollTop2 = 0;
+      
+        document.addEventListener("scroll", function(){            
+            let nowScrollTop2 = $(window).scrollTop();
+
+            if (nowScrollTop2 > prevScrollTop2){               
+                $("header.mo").removeClass('up');  
+                $("input#btnMoMenu+label").removeClass("up")
+                $(".his_subGnb").removeClass("up")
+            }else {               
+                $("header.mo").addClass('up'); 
+                $("input#btnMoMenu+label").addClass("up")
+                $(".his_subGnb").addClass("up")
+            } 
+            prevScrollTop2 = nowScrollTop2; 
+
+            if(nowScrollTop2 > 100){
+                $("header.mo").addClass("down")
+                $("input#btnMoMenu+label").addClass("down")
+                $(".his_subGnb").addClass("down")
+            }else{
+                $("header.mo").removeClass("down")
+                $("header.mo").removeClass('up');
+                $("input#btnMoMenu+label").removeClass("down")
+                $(".his_subGnb").removeClass("up")
+                $(".his_subGnb").removeClass("down")
+            }
+      
+        });
+      
+    })
+    
+
+    // (pc) 연도 이동 메뉴바
+   
+    $(".his_subGnb>ul>li>a").click(function(e){
+
+        e.preventDefault() 
+
+        let target = $(this).attr("href")
+        
+        let target_top = $(target).offset().top
+        
+        moveScroll({top:target_top,speed:1500})
+    })
+
+
+    function moveScroll(option){
+        $("html,body").stop().animate({scrollTop:option.top},option.speed)
+    }
+
+
 
     // 연혁 팝업창 
     $(".btn1985").click(function(e){
@@ -108,6 +169,28 @@ $(document).ready(function(){
 
         e.preventDefault() 
         $(".popup-history").removeClass("show")
+    })
+
+
+    // 내용 나타나기
+    $("ul>li>dl").each(function(){
+        $(this).addClass("blind")        
+    })
+    $(".moHis>div").each(function(){
+        $(this).addClass("blind")        
+    })
+
+
+    $(window).scroll(function(){
+        let winst = $(window).scrollTop() 
+        let winHeight = $(window).height()*0.4 // 브라우저화면의 높이를 계산
+
+        $(".mltr,.mrtl,.downup,.blind").each(function(){
+            if(winst+winHeight>$(this).offset().top){
+                $(this).addClass("on")
+            }
+        })
+
     })
 
 
