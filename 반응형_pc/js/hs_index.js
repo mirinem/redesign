@@ -28,7 +28,7 @@ window.onload = function(){
             } 
             prevScrollTop = nowScrollTop; 
 
-            if(nowScrollTop > 400){
+            if(nowScrollTop > 500){
                 $("header").addClass("down")
             }else{
                 $("header").removeClass("down")
@@ -118,7 +118,7 @@ window.onload = function(){
             } 
             prevScrollTop2 = nowScrollTop2; 
 
-            if(nowScrollTop2 > 300){
+            if(nowScrollTop2 > 200){
                 $("header.mo").addClass("down")
                 $("input#btnMoMenu+label").addClass("down")
             }else{

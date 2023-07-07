@@ -9,7 +9,7 @@ $(document).ready(function(){
       });
       
           
-    // 상단 메뉴바 스크롤 시 변화
+    // (pc) 상단 메뉴바 스크롤 시 변화
     $(function(){
 
         
@@ -29,16 +29,18 @@ $(document).ready(function(){
             } 
             prevScrollTop = nowScrollTop; 
 
-            if(nowScrollTop > 400){
+            if(nowScrollTop>500){
                 $("header").addClass("down")
-                $(".his_subGnb").addClass("down"); 
+                $(".his_subGnb").addClass("top"); 
             }else{
                 $("header").removeClass("down")
                 $("header").removeClass('up');
                 $(".his_subGnb").removeClass("down")
                 $(".his_subGnb").removeClass('up');
+                // $(".his_subGnb").removeClass("top"); 
             }
       
+
         });
       
     })
